@@ -37,9 +37,9 @@ const EmojiWidget = () => {
           {emojis.map((emoji, index) => (
             <div
               key={index}
-              onClick={() => handleSelectEmoji(index)}
+              onClick={() => handleSelectEmoji(`${index}`)}
               className={`emoji-container ${
-                selectedEmoji === index ? "selected" : ""
+                selectedEmoji === `${index}` ? "selected" : ""
               }`}
             >
               <img className={`emoji `} alt="emoji" src={emoji.img} />
